@@ -151,9 +151,6 @@
             } catch (e) { alert('Lỗi hệ thống!'); }
             finally { btn.disabled = false; btn.innerText = 'CHUYỂN ĐỔI NGAY'; }
         }
-
-        let clicks = 0;
-        document.getElementById('logoAdmin').onclick = () => { if(++clicks === 5) { document.getElementById('adminSection').style.display='block'; clicks=0; } };
         <div class="instruction-box">
             <h3>📌Hướng dẫn áp mã:</h3>
             <div class="instruction-step">
@@ -169,6 +166,10 @@
             <a href="https://zalo.me/g/hngoox923" target="_blank" class="btn-zalo">💬 Nhóm Zalo thông báo mã giảm giá</a>
             <a href="https://zalo.me/84333827185" target="_blank" class="btn-zalo btn-help">🆘 Trợ giúp</a>
         </div>
+
+        let clicks = 0;
+        document.getElementById('logoAdmin').onclick = () => { if(++clicks === 5) { document.getElementById('adminSection').style.display='block'; clicks=0; } };
+        
         async function fetchAdminStats() {
             const secret = document.getElementById('adminSecretInput').value;
             if(!secret) return alert('Vui lòng nhập mã!');
