@@ -16,7 +16,7 @@ const DB_ROOT = process.env.DB_ROOT;
 const APP_ID = process.env.APP_ID;     
 const APP_SECRET = process.env.APP_SECRET;
 const ADMIN_SECRET = process.env.ADMIN_SECRET; 
-const AFF_ID = process.env.AFF_ID || "17310280315"; 
+const AFF_ID = process.env.AFF_ID || "17384680191"; 
 const SHOPEE_API_URL = 'https://open-api.affiliate.shopee.vn/graphql';
 
 
@@ -64,7 +64,7 @@ async function getShopeeProductInfo(itemId) {
 // --- HÀM 3: TẠO LINK CHUẨN (UNIVERSAL REDIR) ---
 function generateUniversalLink(originalUrl, subIds = []) {
     const encodedUrl = encodeURIComponent(originalUrl);
-    let finalSubId = subIds.length > 0 ? subIds.join('-') : "PHAMHUONG";
+    let finalSubId = subIds.length > 0 ? subIds.join('-') : "DK";
     return `https://s.shopee.vn/an_redir?origin_link=${encodedUrl}&affiliate_id=${AFF_ID}&sub_id=${finalSubId}`;
 }
 
